@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/01abd283f1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>
+        Upcoming IPO Dashboard
+    </title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="manage-ipo.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <span class="dot"></span>
+            <span class="bf">BF</span>
+            <span class="bluestock">
+                Bluestock Fintech
+            </span>
+            <hr>
+            <div class="menu">
+                <span id="Menu">
+                    MENU
+                </span>
+                <div class="dashboard">
+                    <img src="Images/bar-chart.png" class="sidebar-icons">
+                    <span>
+                        Dashboard
+                    </span>
+                </div>
+                <div style="background-color:rgba(112, 127, 221, 0.1);">
+                    <img src="Images/remove-from-cart.png" class="sidebar-icons">
+                    <span style="width: 78px;
+                    height: 12px;
+                    gap: 0px;
+                    opacity: 0px;
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 12px;
+                    letter-spacing: 0.5px;
+                    color: #5A6ACF;
+                    ">
+                        Manage IPO
+                    </span>
+                </div>
+                <div>
+                    <img src="Images/radio.png" class="sidebar-icons">
+                    <span>
+                        IPO Subscription
+                    </span>
+                </div>
+                <div>
+                    <img src="Images/chat.png" class="sidebar-icons">
+                    <span>
+                        IPO Allotment
+                    </span>
+                </div>
+                <div style="padding-left: 4px; height: 20px; margin-top: 25px; margin-left: 25px; margin-bottom: 10px;">
+                    <span id="others">
+                        OTHERS
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gear" class="sidebar-icons"
+                        style="height:15.19 ;width:14.25px; color: #A6ABC8; opacity: 0.8;"></i>
+                    <span>
+                        Settings
+                    </span>
+                </div>
+                <div>
+                    <img src="Images/wallet.png" class="sidebar-icons" style="opacity: 0.99;">
+                    <span>
+                        API Manager
+                    </span>
+                </div>
+                <div>
+                    <img src="Images/account.png" class="sidebar-icons">
+                    <span>
+                        Accounts
+                    </span>
+                </div>
+                <div>
+                    <img src="Images/info.png" class="sidebar-icons" style="opacity: 0.8;">
+                    <span>
+                        Help
+                    </span>
+                </div>
+                
+        </div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="search-bar">
+                <input placeholder="Search" type="text" id="search-input">
+                <button id="close-button" style="display: none;">
+                    <i class="fa fa-times"></i>
+                </button>
+                <button id="search-button">
+                    <i class="fa fa-search search"></i>
+                </button>
+            </div>
+            <div class="user-info">
+                <span class="profile"></span>
+                <span class="merchant-name">
+                    Hi, Vishal
+                </span>
+                <i class="fa-solid fa-chevron-down down-arrow">
+                </i>
+                <i class="fa-solid fa-bell bell-icon"></i>
+            </div>
+        </div>
+        <div class="table-container">
+            <div class="title-container">
+                <span class="heading">
+                    Upcoming IPO | Dashboard
+                </span>
+                <button class="register-btn">
+                    Register IPO
+                </button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="c1">
+                            Company
+                        </th>
+                        <th id="c2">
+                            Price Band
+                        </th>
+                        <th id="c3">
+                            Open
+                        </th>
+                        <th id="c4">
+                            Close
+                        </th>
+                        <th id="c5">
+                            ISSUE SIZE
+                        </th>
+                        <th id="c6">
+                            ISSUE Type
+                        </th>
+                        <th id="c7">
+                            Listing Date
+                        </th>
+                        <th id="c8">
+                            Status
+                        </th>
+                        <th id="c9">
+                            Action
+                        </th>
+                        <th id="c10">
+                            Delete/View
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="taba">
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button class="page-button back-arrow" onclick="changePage('prev')">
+                    <i class="fa-sharp-duotone fa-solid fa-angle-left"></i>
+                </button>
+                <button class="page-button page-number-button" id="pg-bt-1">
+                    1
+                </button>
+                <button class="page-button page-number-button" id="pg-bt-2">
+                    2
+                </button>
+                <button class="page-button">
+                    ...
+                </button>
+                <button class="page-button page-number-button" id="pg-bt-3">
+                    9
+                </button>
+                <button class="page-button page-number-button" id="pg-bt-4">
+                    10
+                </button>
+                <button class="page-button next-arrow" onclick="changePage('next')">
+                    <i class="fa-sharp-duotone fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="/static/JS/manage-ipo.js"></script>
+</body>
+
+</html>
